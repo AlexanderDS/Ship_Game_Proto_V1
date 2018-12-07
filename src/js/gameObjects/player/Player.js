@@ -42,11 +42,10 @@ export default class Player {
     }
 
     update(deltaTime) {
-        // if(this.inputHandler.pressedKeys.arrowUp) {
-        //     this.position.y -= 5;
-        // }
-        if (this.inputManager.keyDown( this.inputManager.keys.upArrow )) {
-            console.log("uppppppppppppppppppppp the player! Hop Hop!")
+
+        if (this.inputManager.isKeyDown( this.inputManager.keys.upArrow )) {
+            console.log("uppppppppppppppppppppp the player! Hop Hop!");
+            this.position.y -= 5;
         }
     }
 }

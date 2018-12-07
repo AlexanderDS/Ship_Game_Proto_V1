@@ -11,11 +11,11 @@ export default class InputManager {
         }
  
         document.addEventListener("keydown", event => {
-            console.log(this.pressedKeys[event.keyCode] = true);
+            this.pressedKeys[event.keyCode] = true;
         });  
  
         document.addEventListener("keyup", event => {
-           console.log( this.pressedKeys[event.keyCode] = false);
+            this.pressedKeys[event.keyCode] = false;
         });  
  
     }
@@ -26,6 +26,10 @@ export default class InputManager {
  
     keyUp(e) {
         this.pressedKeys[e.keyCode] = false;
+    }
+
+    isKeyDown(key) {
+        return this.pressedKeys[key];
     }
     
     isDown(key) {
