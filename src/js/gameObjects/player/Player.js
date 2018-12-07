@@ -5,7 +5,9 @@ export default class Player {
         this.height = 40,
         this.width = 40,
         this.size = 15,
-        this.inputManager = new InputManager();
+
+        this.inputManager = new InputManager(this.player);
+
         this.maxSpeed = 7;
         this.speed = 0;
 
@@ -17,8 +19,9 @@ export default class Player {
     }
 
     moveUp() {
+        console.log(this.inputManager.keys.w);
+        console.log("uppppppppppppppppppppp the player! Hop Hop!");
         this.position.y -= 5;
-        console.log("move up");
     }
 
     moveRight() {
@@ -42,10 +45,9 @@ export default class Player {
     }
 
     update(deltaTime) {
-
-        if (this.inputManager.isKeyDown( this.inputManager.keys.upArrow )) {
-            console.log("uppppppppppppppppppppp the player! Hop Hop!");
-            this.position.y -= 5;
+        if (this.inputManager.isKeyDown( this.inputManager.keys.w )) {
+            console.log("d");
+            this.moveUp();
         }
     }
 }

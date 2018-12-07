@@ -3,7 +3,6 @@ import * as keys from '../config/Keys';
 export default class InputManager {
     constructor(player) {
         this.keys = keys;
- 
         this.pressedKeys = {};
  
         for (var k in keys) {
