@@ -1,12 +1,12 @@
 import Player from "./gameObjects/player/Player";
-import InputHandler from "./core/InputHandler";
+import InputManager from "./core/InputManager";
 
 export default class Game {
     constructor(gameWidth, gameHeight) {
         this.gameWidth = gameWidth;
         this.gameHeight = gameHeight;
         this.player = new Player(this);
-        new InputHandler(this);
+        new InputManager(this);
     }
 
 

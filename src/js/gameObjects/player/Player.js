@@ -1,9 +1,11 @@
+import InputManager from "../../core/InputManager";
+
 export default class Player {
-    constructor(game) {
+    constructor(inputHandler) {
         this.height = 40,
         this.width = 40,
         this.size = 15,
-
+        this.inputManager = new InputManager();
         this.maxSpeed = 7;
         this.speed = 0;
 
@@ -43,5 +45,8 @@ export default class Player {
         // if(this.inputHandler.pressedKeys.arrowUp) {
         //     this.position.y -= 5;
         // }
+        if (this.inputManager.keyDown( this.inputManager.keys.upArrow )) {
+            console.log("uppppppppppppppppppppp the player! Hop Hop!")
+        }
     }
 }
