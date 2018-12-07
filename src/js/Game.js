@@ -6,7 +6,7 @@ export default class Game {
         this.gameWidth = gameWidth;
         this.gameHeight = gameHeight;
         this.player = new Player(this);
-        new InputHandler(this.player, this);
+        new InputHandler(this);
     }
 
 

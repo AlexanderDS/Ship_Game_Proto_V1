@@ -4,7 +4,7 @@ export default class InputHandler {
     constructor(player) {
         this.keys = keys;
 
-        var pressed = {
+        this.pressedKeys = {
             rightPressed: false,
             leftPressed: false,
             downPressed: false,
@@ -12,16 +12,28 @@ export default class InputHandler {
         }
 
         document.addEventListener("keydown", event => {
-            console.log("Key down " + event.keyCode);
 
+            console.log('Key down' + event.keyCode);
             if(event.keyCode == keys.arrowUp) {
-                pressed.upPressed = true;
+                this.pressedKeys.upPressed = true;
             } else if(event.keyCode == keys.arrowRight) {
-                pressed.rightPressed = true;
+                this.pressedKeys.rightPressed = true;
             } else if(event.keyCode == keys.arrowDown) {
-                pressed.downPressed = true;
+                this.pressedKeys.downPressed = true;
             } else if(event.keyCode == keys.arrowLeft) {
-                pressed.leftPressed = true;
+                this.pressedKeys.leftPressed = true;
+            }
+        });  
+
+        document.addEventListener("keyup", event => {
+            if(event.keyCode == keys.arrowUp) {
+                this.pressedKeys.upPressed = false;
+            } else if(event.keyCode == keys.arrowRight) {
+                this.pressedKeys.rightPressed = false;
+            } else if(event.keyCode == keys.arrowDown) {
+                this.pressedKeys.downPressed = false;
+            } else if(event.keyCode == keys.arrowLeft) {
+                this.pressedKeys.leftPressed = false;
             }
         });  
 

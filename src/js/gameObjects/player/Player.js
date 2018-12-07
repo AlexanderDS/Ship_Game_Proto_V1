@@ -1,6 +1,5 @@
 export default class Player {
     constructor(game) {
-        
         this.height = 40,
         this.width = 40,
         this.size = 15,
@@ -41,6 +40,8 @@ export default class Player {
     }
 
     update(deltaTime) {
-        
+        // if(this.inputHandler.pressedKeys.arrowUp) {
+        //     this.position.y -= 5;
+        // }
     }
 }
