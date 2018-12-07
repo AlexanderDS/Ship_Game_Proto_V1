@@ -1,7 +1,7 @@
 import InputManager from "../../core/InputManager";
 
 export default class Player {
-    constructor(inputHandler) {
+    constructor(inputManager) {
         this.height = 40,
         this.width = 40,
         this.size = 15,

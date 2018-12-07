@@ -11,6 +11,7 @@ export default class InputManager {
         }
  
         document.addEventListener("keydown", event => {
+            event.preventDefault();
             this.pressedKeys[event.keyCode] = true;
         });  
  
