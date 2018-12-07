@@ -32,8 +32,5 @@ export default class InputManager {
         return this.pressedKeys[key];
     }
     
-    isDown(key) {
-        return this.pressedKeys[key];
-    }
 
 }
